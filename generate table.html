@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplication Table with Loop</title>
+</head>
+<body>
+    <h2>Multiplication Table Generator</h2>
+    <label for="numberInput">Enter a number:</label>
+    <input type="number" id="numberInput">
+    <button onclick="generateTable()">Generate Table</button>
+
+    <div id="result"></div>
+
+    <script>
+        function generateTable() {
+            let number = document.getElementById("numberInput").value;
+            let resultDiv = document.getElementById("result");
+
+            let output = `<h3>Multiplication Table for ${number}</h3>`;
+            output += "<ul>";
+
+            for (let i = 1; i <= 10; i++) {
+                output += `<li>${number} x ${i} = ${number * i}</li>`;
+            }
+
+            output += "</ul>";
+            resultDiv.innerHTML = output;
+        }
+    </script>
+</body>
+</html>
